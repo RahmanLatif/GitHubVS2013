@@ -83,7 +83,8 @@ namespace ADB_Project
         private void addbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Addnew ad = new Addnew();
+            Addnew ad = new Addnew(user);
+            ad.Show();
         }
 
         private void btnRst_Click(object sender, EventArgs e)

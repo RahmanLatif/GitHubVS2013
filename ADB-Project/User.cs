@@ -46,5 +46,26 @@ namespace ADB_Project
             db.CloseCon();
             return ds;
         }
+
+        public KeyValuePair<bool, string> AddUser(string uname, string pass, string conpass, string utype)
+        {
+            if (uname == "")
+                return new KeyValuePair<bool, string>(false, "Enter A Username !!");
+            if (pass == "")
+                return new KeyValuePair<bool, string>(false, "Enter A Password !!");
+            if (utype == "")
+                return new KeyValuePair<bool, string>(false, "Choose A User Type !!");
+            if (pass != conpass)
+                return new KeyValuePair<bool, string>(false, "Password Don't Match !!");
+            Authentication au = new Authentication("adb");
+            DataBase db = new DataBase("adb");
+            if (au.Auth_UserN("user", uname))
+                return new KeyValuePair<bool, string>(false, "This User Existed Before !!");
+            db.OpenCon();
+            string query = "insert into user (UserName, UserType, Password) values ('" + uname + "','" + utype + "','" + pass + "');";
+            bool done = db.NonQuery(query);
+            db.CloseCon();
+            return new KeyValuePair<bool, string>(true, "User Added.");
+        }
     }
 }
