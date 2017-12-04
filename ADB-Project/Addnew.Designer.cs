@@ -70,6 +70,7 @@
             this.btnRstLogin.TabIndex = 20;
             this.btnRstLogin.Text = "Reset";
             this.btnRstLogin.UseVisualStyleBackColor = false;
+            this.btnRstLogin.Click += new System.EventHandler(this.btnRstLogin_Click);
             // 
             // btnSbmtLogin
             // 

@@ -34,5 +34,13 @@ namespace ADB_Project
                 MessageBox.Show(ret.Value);
             }
         }
+
+        private void btnRstLogin_Click(object sender, EventArgs e)
+        {
+            cmboUserType.Text = "";
+            txtbxConfirm.Text = "";
+            txtbxPassLogin.Text = "";
+            txtbxUsernameLogin.Text = "";
+        }
     }
 }

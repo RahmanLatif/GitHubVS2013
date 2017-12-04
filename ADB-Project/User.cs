@@ -67,5 +67,14 @@ namespace ADB_Project
             db.CloseCon();
             return new KeyValuePair<bool, string>(true, "User Added.");
         }
+        public DataSet getComments(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from comments where binary PID = \"" + pid + "\";";
+            DataSet ds = db.Query(query);
+            db.CloseCon();
+            return ds;
+        }
     }
 }

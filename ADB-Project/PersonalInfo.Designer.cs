@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.dgvPresentHistory = new System.Windows.Forms.DataGridView();
+            this.dgvPastHistory = new System.Windows.Forms.DataGridView();
+            this.dgvFamHistory = new System.Windows.Forms.DataGridView();
+            this.dgvMedHistory = new System.Windows.Forms.DataGridView();
+            this.dgvComplaint = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -58,18 +63,13 @@
             this.combtn = new System.Windows.Forms.Button();
             this.addbtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dgvComplaint = new System.Windows.Forms.DataGridView();
-            this.dgvMedHistory = new System.Windows.Forms.DataGridView();
-            this.dgvFamHistory = new System.Windows.Forms.DataGridView();
-            this.dgvPastHistory = new System.Windows.Forms.DataGridView();
-            this.dgvPresentHistory = new System.Windows.Forms.DataGridView();
             this.pnlLogin.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComplaint)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFamHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPastHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPresentHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPastHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFamHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComplaint)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLogin
@@ -92,6 +92,56 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(851, 436);
             this.pnlLogin.TabIndex = 15;
+            // 
+            // dgvPresentHistory
+            // 
+            this.dgvPresentHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPresentHistory.Location = new System.Drawing.Point(369, 51);
+            this.dgvPresentHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPresentHistory.Name = "dgvPresentHistory";
+            this.dgvPresentHistory.RowTemplate.Height = 24;
+            this.dgvPresentHistory.Size = new System.Drawing.Size(468, 74);
+            this.dgvPresentHistory.TabIndex = 26;
+            // 
+            // dgvPastHistory
+            // 
+            this.dgvPastHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPastHistory.Location = new System.Drawing.Point(369, 150);
+            this.dgvPastHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPastHistory.Name = "dgvPastHistory";
+            this.dgvPastHistory.RowTemplate.Height = 24;
+            this.dgvPastHistory.Size = new System.Drawing.Size(468, 74);
+            this.dgvPastHistory.TabIndex = 26;
+            // 
+            // dgvFamHistory
+            // 
+            this.dgvFamHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFamHistory.Location = new System.Drawing.Point(369, 248);
+            this.dgvFamHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvFamHistory.Name = "dgvFamHistory";
+            this.dgvFamHistory.RowTemplate.Height = 24;
+            this.dgvFamHistory.Size = new System.Drawing.Size(468, 74);
+            this.dgvFamHistory.TabIndex = 26;
+            // 
+            // dgvMedHistory
+            // 
+            this.dgvMedHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedHistory.Location = new System.Drawing.Point(370, 346);
+            this.dgvMedHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMedHistory.Name = "dgvMedHistory";
+            this.dgvMedHistory.RowTemplate.Height = 24;
+            this.dgvMedHistory.Size = new System.Drawing.Size(468, 81);
+            this.dgvMedHistory.TabIndex = 26;
+            // 
+            // dgvComplaint
+            // 
+            this.dgvComplaint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComplaint.Location = new System.Drawing.Point(10, 346);
+            this.dgvComplaint.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvComplaint.Name = "dgvComplaint";
+            this.dgvComplaint.RowTemplate.Height = 24;
+            this.dgvComplaint.Size = new System.Drawing.Size(333, 81);
+            this.dgvComplaint.TabIndex = 26;
             // 
             // label12
             // 
@@ -425,6 +475,7 @@
             this.combtn.TabIndex = 26;
             this.combtn.Text = "Comments";
             this.combtn.UseVisualStyleBackColor = false;
+            this.combtn.Click += new System.EventHandler(this.combtn_Click);
             // 
             // addbtn
             // 
@@ -454,56 +505,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dgvComplaint
-            // 
-            this.dgvComplaint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComplaint.Location = new System.Drawing.Point(10, 346);
-            this.dgvComplaint.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvComplaint.Name = "dgvComplaint";
-            this.dgvComplaint.RowTemplate.Height = 24;
-            this.dgvComplaint.Size = new System.Drawing.Size(333, 81);
-            this.dgvComplaint.TabIndex = 26;
-            // 
-            // dgvMedHistory
-            // 
-            this.dgvMedHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedHistory.Location = new System.Drawing.Point(370, 346);
-            this.dgvMedHistory.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvMedHistory.Name = "dgvMedHistory";
-            this.dgvMedHistory.RowTemplate.Height = 24;
-            this.dgvMedHistory.Size = new System.Drawing.Size(468, 81);
-            this.dgvMedHistory.TabIndex = 26;
-            // 
-            // dgvFamHistory
-            // 
-            this.dgvFamHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFamHistory.Location = new System.Drawing.Point(369, 248);
-            this.dgvFamHistory.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvFamHistory.Name = "dgvFamHistory";
-            this.dgvFamHistory.RowTemplate.Height = 24;
-            this.dgvFamHistory.Size = new System.Drawing.Size(468, 74);
-            this.dgvFamHistory.TabIndex = 26;
-            // 
-            // dgvPastHistory
-            // 
-            this.dgvPastHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPastHistory.Location = new System.Drawing.Point(369, 150);
-            this.dgvPastHistory.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvPastHistory.Name = "dgvPastHistory";
-            this.dgvPastHistory.RowTemplate.Height = 24;
-            this.dgvPastHistory.Size = new System.Drawing.Size(468, 74);
-            this.dgvPastHistory.TabIndex = 26;
-            // 
-            // dgvPresentHistory
-            // 
-            this.dgvPresentHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPresentHistory.Location = new System.Drawing.Point(369, 51);
-            this.dgvPresentHistory.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvPresentHistory.Name = "dgvPresentHistory";
-            this.dgvPresentHistory.RowTemplate.Height = 24;
-            this.dgvPresentHistory.Size = new System.Drawing.Size(468, 74);
-            this.dgvPresentHistory.TabIndex = 26;
-            // 
             // PersonalInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,13 +526,13 @@
             this.Text = "PersonalInfo";
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPresentHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPastHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFamHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComplaint)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComplaint)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFamHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPastHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPresentHistory)).EndInit();
             this.ResumeLayout(false);
 
         }

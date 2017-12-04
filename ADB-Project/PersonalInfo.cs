@@ -92,5 +92,15 @@ namespace ADB_Project
             ResetData();
         }
 
+        private void combtn_Click(object sender, EventArgs e)
+        {
+            if (txtbxID.Text != "")
+            {
+                Comments cm = new Comments(user, int.Parse(txtbxID.Text));
+                this.Hide();
+                cm.Show();
+            }
+        }
+
     }
 }
