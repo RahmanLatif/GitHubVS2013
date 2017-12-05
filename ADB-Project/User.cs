@@ -67,14 +67,87 @@ namespace ADB_Project
             db.CloseCon();
             return new KeyValuePair<bool, string>(true, "User Added.");
         }
-        public DataSet getComments(int pid)
+        public KeyValuePair<DataSet, MySqlDataAdapter> getComments(int pid)
         {
             DataBase db = new DataBase("adb");
             db.OpenCon();
             string query = "select * from comments where binary PID = \"" + pid + "\";";
-            DataSet ds = db.Query(query);
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
             db.CloseCon();
-            return ds;
+            return ret;
         }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetExamination(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from examination where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetImageStudies(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from imagingstudies where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetTemprature(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from temperaturechart where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetCoagulationProfile(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from coagulationprofile where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetCompleteBloodPicture(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from completebloodpicture where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetElectrolyTeskIdneyfun(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from electrolyteskidneyfun where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetLiverFun(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from liverfun where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetFluid(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from fluidchart where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        
     }
 }

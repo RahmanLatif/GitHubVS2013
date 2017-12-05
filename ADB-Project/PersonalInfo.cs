@@ -102,5 +102,70 @@ namespace ADB_Project
             }
         }
 
+        private void exambtn_Click(object sender, EventArgs e)
+        {
+            int id;
+            bool ok;
+            ok = Int32.TryParse(txtbxID.Text, out id);
+            if (ok)
+            {
+                this.Hide();
+                Examination exam = new Examination(this.user, id);
+                exam.Show();
+            }
+        }
+
+        private void labbtn_Click(object sender, EventArgs e)
+        {
+            int id;
+            bool ok;
+            ok = Int32.TryParse(txtbxID.Text, out id);
+            if (ok)
+            {
+                this.Hide();
+                Laboratory temp = new Laboratory(this.user, id);
+                temp.Show();
+            }
+        }
+
+        private void Imagbtn_Click(object sender, EventArgs e)
+        {
+            int id;
+            bool ok;
+            ok = Int32.TryParse(txtbxID.Text, out id);
+            if (ok)
+            {
+                this.Hide();
+                Laboratory temp = new Laboratory(this.user, id);
+                temp.Show();
+            }
+        }
+
+        private void tempbtn_Click(object sender, EventArgs e)
+        {
+            int id;
+            bool ok;
+            ok = Int32.TryParse(txtbxID.Text, out id);
+            if (ok)
+            {
+                this.Hide();
+                Temprature temp = new Temprature(this.user, id);
+                temp.Show();
+            }
+        }
+
+        private void fluidbtn_Click(object sender, EventArgs e)
+        {
+            int id;
+            bool ok;
+            ok = Int32.TryParse(txtbxID.Text, out id);
+            if (ok)
+            {
+                this.Hide();
+                Fluid temp = new Fluid(this.user, id);
+                temp.Show();
+            }
+        }
+
     }
 }

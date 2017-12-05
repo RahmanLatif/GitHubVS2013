@@ -12,7 +12,6 @@ namespace ADB_Project
 {
     public partial class Login : Form
     {
-        DataBase db;
         public Login()
         {
             InitializeComponent();

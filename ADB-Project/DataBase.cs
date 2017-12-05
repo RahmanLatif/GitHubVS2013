@@ -12,6 +12,7 @@ namespace ADB_Project
         MySqlConnectionStringBuilder build;
         MySqlConnection myconnection;
         MySqlCommand cmd;
+        MySqlCommandBuilder mscb;
         MySqlDataAdapter da;
         string DB;
         public DataBase(string db)
@@ -56,7 +57,22 @@ namespace ADB_Project
             }
             return ds;
         }
-        
+
+        public KeyValuePair<DataSet, MySqlDataAdapter> Queryupd(string query)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                da = new MySqlDataAdapter(query, myconnection);
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                return new KeyValuePair<DataSet, MySqlDataAdapter>(null, null);
+            }
+            return new KeyValuePair<DataSet, MySqlDataAdapter>(ds, da);
+        }
+
         public void CloseCon()
         {
             myconnection.Close();

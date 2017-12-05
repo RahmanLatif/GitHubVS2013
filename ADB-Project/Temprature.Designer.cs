@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvTemprature = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTemprature)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvTemprature
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(740, 512);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvTemprature.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTemprature.Location = new System.Drawing.Point(12, 12);
+            this.dgvTemprature.Name = "dgvTemprature";
+            this.dgvTemprature.Size = new System.Drawing.Size(740, 512);
+            this.dgvTemprature.TabIndex = 1;
             // 
             // Temprature
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 536);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTemprature);
             this.Name = "Temprature";
             this.Text = "Temprature";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTemprature)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTemprature;
+
     }
 }

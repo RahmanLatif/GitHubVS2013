@@ -15,35 +15,34 @@ namespace ADB_Project
     {
         User user;
         int pid;
+        MySqlConnection con;
+        MySqlDataAdapter adapt;
+        MySqlCommandBuilder mscb;
+        KeyValuePair<DataSet, MySqlDataAdapter> ret;
         public Comments(User user, int pid)
         {
             InitializeComponent();
             this.user = user;
             this.pid = pid;
-            dataGridView1.DataSource = user.getComments(pid).Tables[0];
+            ret = user.getComments(pid);
+            dataGridView1.DataSource = ret.Key.Tables[0];
             dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Date";
             dataGridView1.Columns[2].HeaderText = "Comment";
         }
 
-        private void dataGridView1_RowValidated(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            foreach (DataRow dr in ret.Key.Tables[0].Rows)
+            {
+                dr.SetField(0, "" + pid + "");
+            }
             try
             {
-                DataTable changes = ((DataTable)dataGridView1.DataSource).GetChanges();
-                if (changes != null)
-                {
-                    MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
-                    MySqlCommandBuilder mcb = new MySqlCommandBuilder(mySqlDataAdapter);
-                    mySqlDataAdapter.UpdateCommand = mcb.GetUpdateCommand();
-                    mySqlDataAdapter.Update(changes);
-                    ((DataTable)dataGridView1.DataSource).AcceptChanges();
-
-                    MessageBox.Show("Cell Updated");
-                    return;
-                }
-
-
+                mscb = new MySqlCommandBuilder(ret.Value);
+                ret.Value.Update(ret.Key);
+                MessageBox.Show("Updating done");
             }
 
             catch (Exception ex)
@@ -51,5 +50,13 @@ namespace ADB_Project
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PersonalInfo pi = new PersonalInfo(user);
+            this.Hide();
+            pi.Show();
+        }
+
     }
 }

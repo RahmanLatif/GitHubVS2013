@@ -28,45 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnRstLogin = new System.Windows.Forms.Button();
+            this.btnSbmtLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.lbl = new System.Windows.Forms.Label();
+            this.examdate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.provisionaldiag = new System.Windows.Forms.TextBox();
+            this.auscultation = new System.Windows.Forms.TextBox();
+            this.percussion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.deepplap = new System.Windows.Forms.TextBox();
+            this.superficial = new System.Windows.Forms.TextBox();
+            this.inspection = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.temprature = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.respiratory = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.bloodpressure = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtbxUsernameLogin = new System.Windows.Forms.TextBox();
+            this.pulse = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.headneck = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.generallock = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.cardiac = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.btnRstLogin = new System.Windows.Forms.Button();
-            this.btnSbmtLogin = new System.Windows.Forms.Button();
+            this.chestexamination = new System.Windows.Forms.TextBox();
             this.pnlLogin.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -76,9 +78,37 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btnRstLogin
+            // 
+            this.btnRstLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnRstLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRstLogin.ForeColor = System.Drawing.Color.White;
+            this.btnRstLogin.Location = new System.Drawing.Point(694, 582);
+            this.btnRstLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRstLogin.Name = "btnRstLogin";
+            this.btnRstLogin.Size = new System.Drawing.Size(79, 53);
+            this.btnRstLogin.TabIndex = 27;
+            this.btnRstLogin.Text = "Reset";
+            this.btnRstLogin.UseVisualStyleBackColor = false;
+            // 
+            // btnSbmtLogin
+            // 
+            this.btnSbmtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSbmtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSbmtLogin.ForeColor = System.Drawing.Color.White;
+            this.btnSbmtLogin.Location = new System.Drawing.Point(782, 582);
+            this.btnSbmtLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSbmtLogin.Name = "btnSbmtLogin";
+            this.btnSbmtLogin.Size = new System.Drawing.Size(79, 53);
+            this.btnSbmtLogin.TabIndex = 26;
+            this.btnSbmtLogin.Text = "Submit";
+            this.btnSbmtLogin.UseVisualStyleBackColor = false;
+            // 
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.Silver;
+            this.pnlLogin.Controls.Add(this.lbl);
+            this.pnlLogin.Controls.Add(this.examdate);
             this.pnlLogin.Controls.Add(this.label5);
             this.pnlLogin.Controls.Add(this.panel1);
             this.pnlLogin.Controls.Add(this.label1);
@@ -91,11 +121,30 @@
             this.pnlLogin.Controls.Add(this.panel4);
             this.pnlLogin.Controls.Add(this.label10);
             this.pnlLogin.Controls.Add(this.panel3);
-            this.pnlLogin.Location = new System.Drawing.Point(9, 9);
-            this.pnlLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlLogin.Location = new System.Drawing.Point(10, 8);
+            this.pnlLogin.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(851, 570);
-            this.pnlLogin.TabIndex = 16;
+            this.pnlLogin.TabIndex = 28;
+            // 
+            // lbl
+            // 
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lbl.Location = new System.Drawing.Point(463, 332);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(154, 23);
+            this.lbl.TabIndex = 31;
+            this.lbl.Text = "Examination Date";
+            // 
+            // examdate
+            // 
+            this.examdate.CustomFormat = "yyyy/MM/dd";
+            this.examdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.examdate.Location = new System.Drawing.Point(633, 332);
+            this.examdate.Name = "examdate";
+            this.examdate.Size = new System.Drawing.Size(200, 20);
+            this.examdate.TabIndex = 30;
             // 
             // label5
             // 
@@ -112,59 +161,59 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox12);
-            this.panel1.Controls.Add(this.textBox13);
+            this.panel1.Controls.Add(this.provisionaldiag);
+            this.panel1.Controls.Add(this.auscultation);
+            this.panel1.Controls.Add(this.percussion);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.deepplap);
+            this.panel1.Controls.Add(this.superficial);
+            this.panel1.Controls.Add(this.inspection);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Location = new System.Drawing.Point(10, 357);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(823, 179);
             this.panel1.TabIndex = 28;
             // 
-            // textBox11
+            // provisionaldiag
             // 
-            this.textBox11.BackColor = System.Drawing.Color.White;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(542, 120);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(258, 44);
-            this.textBox11.TabIndex = 29;
+            this.provisionaldiag.BackColor = System.Drawing.Color.White;
+            this.provisionaldiag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.provisionaldiag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.provisionaldiag.Location = new System.Drawing.Point(542, 120);
+            this.provisionaldiag.Margin = new System.Windows.Forms.Padding(2);
+            this.provisionaldiag.Multiline = true;
+            this.provisionaldiag.Name = "provisionaldiag";
+            this.provisionaldiag.Size = new System.Drawing.Size(258, 44);
+            this.provisionaldiag.TabIndex = 29;
             // 
-            // textBox12
+            // auscultation
             // 
-            this.textBox12.BackColor = System.Drawing.Color.White;
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(542, 67);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(258, 44);
-            this.textBox12.TabIndex = 28;
+            this.auscultation.BackColor = System.Drawing.Color.White;
+            this.auscultation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.auscultation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.auscultation.Location = new System.Drawing.Point(542, 67);
+            this.auscultation.Margin = new System.Windows.Forms.Padding(2);
+            this.auscultation.Multiline = true;
+            this.auscultation.Name = "auscultation";
+            this.auscultation.Size = new System.Drawing.Size(258, 44);
+            this.auscultation.TabIndex = 28;
             // 
-            // textBox13
+            // percussion
             // 
-            this.textBox13.BackColor = System.Drawing.Color.White;
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(542, 15);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(258, 44);
-            this.textBox13.TabIndex = 27;
+            this.percussion.BackColor = System.Drawing.Color.White;
+            this.percussion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.percussion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percussion.Location = new System.Drawing.Point(542, 15);
+            this.percussion.Margin = new System.Windows.Forms.Padding(2);
+            this.percussion.Multiline = true;
+            this.percussion.Name = "percussion";
+            this.percussion.Size = new System.Drawing.Size(258, 44);
+            this.percussion.TabIndex = 27;
             // 
             // label6
             // 
@@ -199,41 +248,41 @@
             this.label16.TabIndex = 24;
             this.label16.Text = "Percussion";
             // 
-            // textBox10
+            // deepplap
             // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(136, 120);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(258, 44);
-            this.textBox10.TabIndex = 23;
+            this.deepplap.BackColor = System.Drawing.Color.White;
+            this.deepplap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.deepplap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deepplap.Location = new System.Drawing.Point(136, 120);
+            this.deepplap.Margin = new System.Windows.Forms.Padding(2);
+            this.deepplap.Multiline = true;
+            this.deepplap.Name = "deepplap";
+            this.deepplap.Size = new System.Drawing.Size(258, 44);
+            this.deepplap.TabIndex = 23;
             // 
-            // textBox5
+            // superficial
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(136, 67);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(258, 44);
-            this.textBox5.TabIndex = 22;
+            this.superficial.BackColor = System.Drawing.Color.White;
+            this.superficial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.superficial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.superficial.Location = new System.Drawing.Point(136, 67);
+            this.superficial.Margin = new System.Windows.Forms.Padding(2);
+            this.superficial.Multiline = true;
+            this.superficial.Name = "superficial";
+            this.superficial.Size = new System.Drawing.Size(258, 44);
+            this.superficial.TabIndex = 22;
             // 
-            // textBox4
+            // inspection
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(136, 15);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 44);
-            this.textBox4.TabIndex = 21;
+            this.inspection.BackColor = System.Drawing.Color.White;
+            this.inspection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.inspection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inspection.Location = new System.Drawing.Point(136, 15);
+            this.inspection.Margin = new System.Windows.Forms.Padding(2);
+            this.inspection.Multiline = true;
+            this.inspection.Name = "inspection";
+            this.inspection.Size = new System.Drawing.Size(258, 44);
+            this.inspection.TabIndex = 21;
             // 
             // label7
             // 
@@ -283,30 +332,30 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.temprature);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.respiratory);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.bloodpressure);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.txtbxUsernameLogin);
+            this.panel5.Controls.Add(this.pulse);
             this.panel5.Location = new System.Drawing.Point(10, 141);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(338, 179);
             this.panel5.TabIndex = 26;
             // 
-            // textBox1
+            // temprature
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(158, 97);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 21);
-            this.textBox1.TabIndex = 19;
+            this.temprature.BackColor = System.Drawing.Color.White;
+            this.temprature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.temprature.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.temprature.Location = new System.Drawing.Point(158, 97);
+            this.temprature.Margin = new System.Windows.Forms.Padding(2);
+            this.temprature.Name = "temprature";
+            this.temprature.Size = new System.Drawing.Size(166, 21);
+            this.temprature.TabIndex = 19;
             // 
             // label4
             // 
@@ -319,16 +368,16 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Respiratory State";
             // 
-            // textBox3
+            // respiratory
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(158, 135);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 21);
-            this.textBox3.TabIndex = 17;
+            this.respiratory.BackColor = System.Drawing.Color.White;
+            this.respiratory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.respiratory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.respiratory.Location = new System.Drawing.Point(158, 135);
+            this.respiratory.Margin = new System.Windows.Forms.Padding(2);
+            this.respiratory.Name = "respiratory";
+            this.respiratory.Size = new System.Drawing.Size(166, 21);
+            this.respiratory.TabIndex = 17;
             // 
             // label3
             // 
@@ -341,16 +390,16 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Temperature";
             // 
-            // textBox2
+            // bloodpressure
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(158, 62);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 21);
-            this.textBox2.TabIndex = 15;
+            this.bloodpressure.BackColor = System.Drawing.Color.White;
+            this.bloodpressure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bloodpressure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodpressure.Location = new System.Drawing.Point(158, 62);
+            this.bloodpressure.Margin = new System.Windows.Forms.Padding(2);
+            this.bloodpressure.Name = "bloodpressure";
+            this.bloodpressure.Size = new System.Drawing.Size(166, 21);
+            this.bloodpressure.TabIndex = 15;
             // 
             // label2
             // 
@@ -374,16 +423,16 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Pulse";
             // 
-            // txtbxUsernameLogin
+            // pulse
             // 
-            this.txtbxUsernameLogin.BackColor = System.Drawing.Color.White;
-            this.txtbxUsernameLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbxUsernameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxUsernameLogin.Location = new System.Drawing.Point(158, 24);
-            this.txtbxUsernameLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtbxUsernameLogin.Name = "txtbxUsernameLogin";
-            this.txtbxUsernameLogin.Size = new System.Drawing.Size(166, 21);
-            this.txtbxUsernameLogin.TabIndex = 2;
+            this.pulse.BackColor = System.Drawing.Color.White;
+            this.pulse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pulse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pulse.Location = new System.Drawing.Point(158, 24);
+            this.pulse.Margin = new System.Windows.Forms.Padding(2);
+            this.pulse.Name = "pulse";
+            this.pulse.Size = new System.Drawing.Size(166, 21);
+            this.pulse.TabIndex = 2;
             // 
             // label12
             // 
@@ -400,24 +449,24 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.textBox9);
+            this.panel6.Controls.Add(this.headneck);
             this.panel6.Location = new System.Drawing.Point(366, 38);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(467, 72);
             this.panel6.TabIndex = 24;
             // 
-            // textBox9
+            // headneck
             // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(3, 6);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(461, 61);
-            this.textBox9.TabIndex = 20;
+            this.headneck.BackColor = System.Drawing.Color.White;
+            this.headneck.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.headneck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headneck.Location = new System.Drawing.Point(3, 6);
+            this.headneck.Margin = new System.Windows.Forms.Padding(2);
+            this.headneck.Multiline = true;
+            this.headneck.Name = "headneck";
+            this.headneck.Size = new System.Drawing.Size(461, 61);
+            this.headneck.TabIndex = 20;
             // 
             // label9
             // 
@@ -434,24 +483,24 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.generallock);
             this.panel2.Location = new System.Drawing.Point(10, 38);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(338, 72);
             this.panel2.TabIndex = 22;
             // 
-            // textBox6
+            // generallock
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(2, 6);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(333, 61);
-            this.textBox6.TabIndex = 20;
+            this.generallock.BackColor = System.Drawing.Color.White;
+            this.generallock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.generallock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generallock.Location = new System.Drawing.Point(3, 6);
+            this.generallock.Margin = new System.Windows.Forms.Padding(2);
+            this.generallock.Multiline = true;
+            this.generallock.Name = "generallock";
+            this.generallock.Size = new System.Drawing.Size(333, 61);
+            this.generallock.TabIndex = 20;
             // 
             // label11
             // 
@@ -468,24 +517,24 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.textBox8);
+            this.panel4.Controls.Add(this.cardiac);
             this.panel4.Location = new System.Drawing.Point(366, 248);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(467, 72);
             this.panel4.TabIndex = 20;
             // 
-            // textBox8
+            // cardiac
             // 
-            this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(3, 6);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(461, 61);
-            this.textBox8.TabIndex = 20;
+            this.cardiac.BackColor = System.Drawing.Color.White;
+            this.cardiac.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cardiac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardiac.Location = new System.Drawing.Point(3, 6);
+            this.cardiac.Margin = new System.Windows.Forms.Padding(2);
+            this.cardiac.Multiline = true;
+            this.cardiac.Name = "cardiac";
+            this.cardiac.Size = new System.Drawing.Size(461, 61);
+            this.cardiac.TabIndex = 20;
             // 
             // label10
             // 
@@ -502,60 +551,34 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.chestexamination);
             this.panel3.Location = new System.Drawing.Point(366, 142);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(467, 72);
             this.panel3.TabIndex = 18;
             // 
-            // textBox7
+            // chestexamination
             // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(3, 6);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(461, 61);
-            this.textBox7.TabIndex = 20;
-            // 
-            // btnRstLogin
-            // 
-            this.btnRstLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnRstLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRstLogin.ForeColor = System.Drawing.Color.White;
-            this.btnRstLogin.Location = new System.Drawing.Point(694, 582);
-            this.btnRstLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnRstLogin.Name = "btnRstLogin";
-            this.btnRstLogin.Size = new System.Drawing.Size(79, 53);
-            this.btnRstLogin.TabIndex = 27;
-            this.btnRstLogin.Text = "Reset";
-            this.btnRstLogin.UseVisualStyleBackColor = false;
-            // 
-            // btnSbmtLogin
-            // 
-            this.btnSbmtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnSbmtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSbmtLogin.ForeColor = System.Drawing.Color.White;
-            this.btnSbmtLogin.Location = new System.Drawing.Point(782, 582);
-            this.btnSbmtLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSbmtLogin.Name = "btnSbmtLogin";
-            this.btnSbmtLogin.Size = new System.Drawing.Size(79, 53);
-            this.btnSbmtLogin.TabIndex = 26;
-            this.btnSbmtLogin.Text = "Submit";
-            this.btnSbmtLogin.UseVisualStyleBackColor = false;
+            this.chestexamination.BackColor = System.Drawing.Color.White;
+            this.chestexamination.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chestexamination.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chestexamination.Location = new System.Drawing.Point(3, 6);
+            this.chestexamination.Margin = new System.Windows.Forms.Padding(2);
+            this.chestexamination.Multiline = true;
+            this.chestexamination.Name = "chestexamination";
+            this.chestexamination.Size = new System.Drawing.Size(461, 61);
+            this.chestexamination.TabIndex = 20;
             // 
             // Examination
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 642);
+            this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.btnRstLogin);
             this.Controls.Add(this.btnSbmtLogin);
-            this.Controls.Add(this.pnlLogin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Examination";
             this.Text = "Examination";
             this.pnlLogin.ResumeLayout(false);
@@ -578,45 +601,47 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlLogin;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button btnRstLogin;
         private System.Windows.Forms.Button btnSbmtLogin;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtbxUsernameLogin;
+        private System.Windows.Forms.Panel pnlLogin;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.DateTimePicker examdate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox provisionaldiag;
+        private System.Windows.Forms.TextBox auscultation;
+        private System.Windows.Forms.TextBox percussion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox deepplap;
+        private System.Windows.Forms.TextBox superficial;
+        private System.Windows.Forms.TextBox inspection;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox temprature;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox respiratory;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox bloodpressure;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox pulse;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox headneck;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox generallock;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox cardiac;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox chestexamination;
 
     }
 }

@@ -410,6 +410,7 @@
             this.exambtn.TabIndex = 21;
             this.exambtn.Text = "Examination";
             this.exambtn.UseVisualStyleBackColor = false;
+            this.exambtn.Click += new System.EventHandler(this.exambtn_Click);
             // 
             // labbtn
             // 
@@ -423,6 +424,7 @@
             this.labbtn.TabIndex = 22;
             this.labbtn.Text = "LAB Invest";
             this.labbtn.UseVisualStyleBackColor = false;
+            this.labbtn.Click += new System.EventHandler(this.labbtn_Click);
             // 
             // Imagbtn
             // 
@@ -436,6 +438,7 @@
             this.Imagbtn.TabIndex = 23;
             this.Imagbtn.Text = "Imaging studies";
             this.Imagbtn.UseVisualStyleBackColor = false;
+            this.Imagbtn.Click += new System.EventHandler(this.Imagbtn_Click);
             // 
             // tempbtn
             // 
@@ -449,6 +452,7 @@
             this.tempbtn.TabIndex = 24;
             this.tempbtn.Text = "Temperature";
             this.tempbtn.UseVisualStyleBackColor = false;
+            this.tempbtn.Click += new System.EventHandler(this.tempbtn_Click);
             // 
             // fluidbtn
             // 
@@ -462,6 +466,7 @@
             this.fluidbtn.TabIndex = 25;
             this.fluidbtn.Text = "Fluid";
             this.fluidbtn.UseVisualStyleBackColor = false;
+            this.fluidbtn.Click += new System.EventHandler(this.fluidbtn_Click);
             // 
             // combtn
             // 
