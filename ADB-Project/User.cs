@@ -41,7 +41,7 @@ namespace ADB_Project
         {
             DataBase db = new DataBase("adb");
             db.OpenCon();
-            string query = "select * from patient where binary PatientId = \"" + pid + "\";";
+            string query = "select * from patient where binary PID = \"" + pid + "\";";
             DataSet ds = db.Query(query);
             db.CloseCon();
             return ds;
@@ -148,6 +148,52 @@ namespace ADB_Project
             db.CloseCon();
             return ret;
         }
-        
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetHistoryOfPast(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from pasthistory where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetComplain(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from complain where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetMedicalHistory(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from medicalhistory where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetFamilyHistory(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from familyhistory where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+        public KeyValuePair<DataSet, MySqlDataAdapter> GetPresentHistory(int pid)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "select * from prillness where binary PID = \"" + pid + "\";";
+            KeyValuePair<DataSet, MySqlDataAdapter> ret = db.Queryupd(query);
+            db.CloseCon();
+            return ret;
+        }
+
     }
 }
