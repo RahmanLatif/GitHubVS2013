@@ -98,5 +98,64 @@ namespace ADB_Project
                 MessageBox.Show("Enter Correct Information !!");
             }
         }
+
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Blood Report";
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Clinical System";
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dgvblood);
+        }
+
+        private void printbtn2_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Coagulation Profile Report";
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Clinical System";
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dgvprofile);
+        }
+        private void printbtn3_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Electrolutes and Kidney Functions Report";
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Clinical System";
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dgvprofile);
+        }
+
+        private void printbtn4_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Liver Function Test Report";
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Clinical System";
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dgvfunctions);
+        }
     }
 }

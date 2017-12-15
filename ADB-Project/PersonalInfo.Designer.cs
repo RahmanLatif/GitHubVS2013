@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.printbtn4 = new System.Windows.Forms.Button();
+            this.printbtn3 = new System.Windows.Forms.Button();
+            this.printbtn2 = new System.Windows.Forms.Button();
+            this.printbtn = new System.Windows.Forms.Button();
             this.dgvPresentHistory = new System.Windows.Forms.DataGridView();
             this.dgvPastHistory = new System.Windows.Forms.DataGridView();
             this.dgvFamHistory = new System.Windows.Forms.DataGridView();
@@ -63,6 +67,7 @@
             this.combtn = new System.Windows.Forms.Button();
             this.addbtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.printbtn5 = new System.Windows.Forms.Button();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPresentHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPastHistory)).BeginInit();
@@ -75,6 +80,11 @@
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.Silver;
+            this.pnlLogin.Controls.Add(this.printbtn5);
+            this.pnlLogin.Controls.Add(this.printbtn4);
+            this.pnlLogin.Controls.Add(this.printbtn3);
+            this.pnlLogin.Controls.Add(this.printbtn2);
+            this.pnlLogin.Controls.Add(this.printbtn);
             this.pnlLogin.Controls.Add(this.dgvPresentHistory);
             this.pnlLogin.Controls.Add(this.dgvPastHistory);
             this.pnlLogin.Controls.Add(this.dgvFamHistory);
@@ -93,6 +103,62 @@
             this.pnlLogin.Size = new System.Drawing.Size(851, 436);
             this.pnlLogin.TabIndex = 15;
             // 
+            // printbtn4
+            // 
+            this.printbtn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.printbtn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn4.ForeColor = System.Drawing.Color.White;
+            this.printbtn4.Location = new System.Drawing.Point(780, 374);
+            this.printbtn4.Margin = new System.Windows.Forms.Padding(2);
+            this.printbtn4.Name = "printbtn4";
+            this.printbtn4.Size = new System.Drawing.Size(69, 53);
+            this.printbtn4.TabIndex = 34;
+            this.printbtn4.Text = "Print";
+            this.printbtn4.UseVisualStyleBackColor = false;
+            this.printbtn4.Click += new System.EventHandler(this.printbtn4_Click);
+            // 
+            // printbtn3
+            // 
+            this.printbtn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.printbtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn3.ForeColor = System.Drawing.Color.White;
+            this.printbtn3.Location = new System.Drawing.Point(780, 269);
+            this.printbtn3.Margin = new System.Windows.Forms.Padding(2);
+            this.printbtn3.Name = "printbtn3";
+            this.printbtn3.Size = new System.Drawing.Size(69, 53);
+            this.printbtn3.TabIndex = 33;
+            this.printbtn3.Text = "Print";
+            this.printbtn3.UseVisualStyleBackColor = false;
+            this.printbtn3.Click += new System.EventHandler(this.printbtn3_Click);
+            // 
+            // printbtn2
+            // 
+            this.printbtn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.printbtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn2.ForeColor = System.Drawing.Color.White;
+            this.printbtn2.Location = new System.Drawing.Point(780, 171);
+            this.printbtn2.Margin = new System.Windows.Forms.Padding(2);
+            this.printbtn2.Name = "printbtn2";
+            this.printbtn2.Size = new System.Drawing.Size(69, 53);
+            this.printbtn2.TabIndex = 32;
+            this.printbtn2.Text = "Print";
+            this.printbtn2.UseVisualStyleBackColor = false;
+            this.printbtn2.Click += new System.EventHandler(this.printbtn2_Click);
+            // 
+            // printbtn
+            // 
+            this.printbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.printbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn.ForeColor = System.Drawing.Color.White;
+            this.printbtn.Location = new System.Drawing.Point(780, 72);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.printbtn.Name = "printbtn";
+            this.printbtn.Size = new System.Drawing.Size(69, 53);
+            this.printbtn.TabIndex = 31;
+            this.printbtn.Text = "Print";
+            this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click_1);
+            // 
             // dgvPresentHistory
             // 
             this.dgvPresentHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -100,7 +166,7 @@
             this.dgvPresentHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPresentHistory.Name = "dgvPresentHistory";
             this.dgvPresentHistory.RowTemplate.Height = 24;
-            this.dgvPresentHistory.Size = new System.Drawing.Size(468, 74);
+            this.dgvPresentHistory.Size = new System.Drawing.Size(407, 74);
             this.dgvPresentHistory.TabIndex = 26;
             // 
             // dgvPastHistory
@@ -110,7 +176,7 @@
             this.dgvPastHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPastHistory.Name = "dgvPastHistory";
             this.dgvPastHistory.RowTemplate.Height = 24;
-            this.dgvPastHistory.Size = new System.Drawing.Size(468, 74);
+            this.dgvPastHistory.Size = new System.Drawing.Size(407, 74);
             this.dgvPastHistory.TabIndex = 26;
             // 
             // dgvFamHistory
@@ -120,7 +186,7 @@
             this.dgvFamHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dgvFamHistory.Name = "dgvFamHistory";
             this.dgvFamHistory.RowTemplate.Height = 24;
-            this.dgvFamHistory.Size = new System.Drawing.Size(468, 74);
+            this.dgvFamHistory.Size = new System.Drawing.Size(407, 74);
             this.dgvFamHistory.TabIndex = 26;
             // 
             // dgvMedHistory
@@ -130,17 +196,17 @@
             this.dgvMedHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMedHistory.Name = "dgvMedHistory";
             this.dgvMedHistory.RowTemplate.Height = 24;
-            this.dgvMedHistory.Size = new System.Drawing.Size(468, 81);
+            this.dgvMedHistory.Size = new System.Drawing.Size(406, 81);
             this.dgvMedHistory.TabIndex = 26;
             // 
             // dgvComplaint
             // 
             this.dgvComplaint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComplaint.Location = new System.Drawing.Point(10, 346);
+            this.dgvComplaint.Location = new System.Drawing.Point(19, 346);
             this.dgvComplaint.Margin = new System.Windows.Forms.Padding(2);
             this.dgvComplaint.Name = "dgvComplaint";
             this.dgvComplaint.RowTemplate.Height = 24;
-            this.dgvComplaint.Size = new System.Drawing.Size(333, 81);
+            this.dgvComplaint.Size = new System.Drawing.Size(267, 81);
             this.dgvComplaint.TabIndex = 26;
             // 
             // label12
@@ -376,10 +442,10 @@
             this.btnRst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnRst.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRst.ForeColor = System.Drawing.Color.White;
-            this.btnRst.Location = new System.Drawing.Point(34, 536);
+            this.btnRst.Location = new System.Drawing.Point(9, 536);
             this.btnRst.Margin = new System.Windows.Forms.Padding(2);
             this.btnRst.Name = "btnRst";
-            this.btnRst.Size = new System.Drawing.Size(79, 53);
+            this.btnRst.Size = new System.Drawing.Size(118, 53);
             this.btnRst.TabIndex = 20;
             this.btnRst.Text = "Reset";
             this.btnRst.UseVisualStyleBackColor = false;
@@ -390,10 +456,10 @@
             this.btnSbmtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnSbmtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSbmtLogin.ForeColor = System.Drawing.Color.White;
-            this.btnSbmtLogin.Location = new System.Drawing.Point(126, 535);
+            this.btnSbmtLogin.Location = new System.Drawing.Point(131, 535);
             this.btnSbmtLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnSbmtLogin.Name = "btnSbmtLogin";
-            this.btnSbmtLogin.Size = new System.Drawing.Size(79, 53);
+            this.btnSbmtLogin.Size = new System.Drawing.Size(111, 53);
             this.btnSbmtLogin.TabIndex = 19;
             this.btnSbmtLogin.Text = "Submit";
             this.btnSbmtLogin.UseVisualStyleBackColor = false;
@@ -510,6 +576,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // printbtn5
+            // 
+            this.printbtn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.printbtn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn5.ForeColor = System.Drawing.Color.White;
+            this.printbtn5.Location = new System.Drawing.Point(288, 374);
+            this.printbtn5.Margin = new System.Windows.Forms.Padding(2);
+            this.printbtn5.Name = "printbtn5";
+            this.printbtn5.Size = new System.Drawing.Size(69, 53);
+            this.printbtn5.TabIndex = 35;
+            this.printbtn5.Text = "Print";
+            this.printbtn5.UseVisualStyleBackColor = false;
+            this.printbtn5.Click += new System.EventHandler(this.printbtn5_Click);
+            // 
             // PersonalInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,5 +659,10 @@
         private System.Windows.Forms.DataGridView dgvFamHistory;
         private System.Windows.Forms.DataGridView dgvMedHistory;
         private System.Windows.Forms.DataGridView dgvComplaint;
+        private System.Windows.Forms.Button printbtn;
+        private System.Windows.Forms.Button printbtn4;
+        private System.Windows.Forms.Button printbtn3;
+        private System.Windows.Forms.Button printbtn2;
+        private System.Windows.Forms.Button printbtn5;
     }
 }

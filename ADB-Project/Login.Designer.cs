@@ -51,12 +51,12 @@
             this.btnSbmtLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmboUserType = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtbxUsernameLogin = new System.Windows.Forms.TextBox();
             this.txtbxPassLogin = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cmboUserType = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlLogin.SuspendLayout();
@@ -333,6 +333,30 @@
             this.panel5.Size = new System.Drawing.Size(187, 228);
             this.panel5.TabIndex = 12;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Type";
+            // 
+            // cmboUserType
+            // 
+            this.cmboUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmboUserType.FormattingEnabled = true;
+            this.cmboUserType.Items.AddRange(new object[] {
+            "Doctor",
+            "Xray technician",
+            "Analysis technician"});
+            this.cmboUserType.Location = new System.Drawing.Point(12, 51);
+            this.cmboUserType.Name = "cmboUserType";
+            this.cmboUserType.Size = new System.Drawing.Size(166, 23);
+            this.cmboUserType.TabIndex = 14;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -343,6 +367,17 @@
             this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 13;
             this.label7.Text = "Password";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(9, 84);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 20);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Username";
             // 
             // txtbxUsernameLogin
             // 
@@ -366,40 +401,6 @@
             this.txtbxPassLogin.PasswordChar = '*';
             this.txtbxPassLogin.Size = new System.Drawing.Size(166, 21);
             this.txtbxPassLogin.TabIndex = 5;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(9, 84);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 20);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Username";
-            // 
-            // cmboUserType
-            // 
-            this.cmboUserType.FormattingEnabled = true;
-            this.cmboUserType.Items.AddRange(new object[] {
-            "Doctor",
-            "Xray technician",
-            "Analysis technician"});
-            this.cmboUserType.Location = new System.Drawing.Point(12, 51);
-            this.cmboUserType.Name = "cmboUserType";
-            this.cmboUserType.Size = new System.Drawing.Size(166, 21);
-            this.cmboUserType.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Type";
             // 
             // Login
             // 

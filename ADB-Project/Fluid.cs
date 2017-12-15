@@ -58,5 +58,20 @@ namespace ADB_Project
             this.Hide();
             pi.Show();
         }
+
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Fluid Report";
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Clinical System";
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dgvfluid);
+        }
     }
 }

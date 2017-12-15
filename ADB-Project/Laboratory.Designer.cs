@@ -30,6 +30,10 @@
         {
             this.btnSbmtLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.printbtn4 = new System.Windows.Forms.Button();
+            this.printbtn3 = new System.Windows.Forms.Button();
+            this.printbtn2 = new System.Windows.Forms.Button();
+            this.printbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvliver = new System.Windows.Forms.DataGridView();
@@ -58,10 +62,10 @@
             this.btnSbmtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnSbmtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSbmtLogin.ForeColor = System.Drawing.Color.White;
-            this.btnSbmtLogin.Location = new System.Drawing.Point(642, 553);
+            this.btnSbmtLogin.Location = new System.Drawing.Point(738, 558);
             this.btnSbmtLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnSbmtLogin.Name = "btnSbmtLogin";
-            this.btnSbmtLogin.Size = new System.Drawing.Size(79, 53);
+            this.btnSbmtLogin.Size = new System.Drawing.Size(109, 53);
             this.btnSbmtLogin.TabIndex = 29;
             this.btnSbmtLogin.Text = "Update";
             this.btnSbmtLogin.UseVisualStyleBackColor = false;
@@ -70,6 +74,10 @@
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.Silver;
+            this.pnlLogin.Controls.Add(this.printbtn4);
+            this.pnlLogin.Controls.Add(this.printbtn3);
+            this.pnlLogin.Controls.Add(this.printbtn2);
+            this.pnlLogin.Controls.Add(this.printbtn);
             this.pnlLogin.Controls.Add(this.label3);
             this.pnlLogin.Controls.Add(this.panel4);
             this.pnlLogin.Controls.Add(this.label2);
@@ -81,15 +89,71 @@
             this.pnlLogin.Location = new System.Drawing.Point(12, 14);
             this.pnlLogin.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(712, 531);
+            this.pnlLogin.Size = new System.Drawing.Size(835, 531);
             this.pnlLogin.TabIndex = 31;
+            // 
+            // printbtn4
+            // 
+            this.printbtn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.printbtn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn4.ForeColor = System.Drawing.Color.White;
+            this.printbtn4.Location = new System.Drawing.Point(766, 454);
+            this.printbtn4.Margin = new System.Windows.Forms.Padding(2);
+            this.printbtn4.Name = "printbtn4";
+            this.printbtn4.Size = new System.Drawing.Size(67, 53);
+            this.printbtn4.TabIndex = 35;
+            this.printbtn4.Text = "Print";
+            this.printbtn4.UseVisualStyleBackColor = false;
+            this.printbtn4.Click += new System.EventHandler(this.printbtn4_Click);
+            // 
+            // printbtn3
+            // 
+            this.printbtn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.printbtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn3.ForeColor = System.Drawing.Color.White;
+            this.printbtn3.Location = new System.Drawing.Point(355, 454);
+            this.printbtn3.Margin = new System.Windows.Forms.Padding(2);
+            this.printbtn3.Name = "printbtn3";
+            this.printbtn3.Size = new System.Drawing.Size(67, 53);
+            this.printbtn3.TabIndex = 34;
+            this.printbtn3.Text = "Print";
+            this.printbtn3.UseVisualStyleBackColor = false;
+            this.printbtn3.Click += new System.EventHandler(this.printbtn3_Click);
+            // 
+            // printbtn2
+            // 
+            this.printbtn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.printbtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn2.ForeColor = System.Drawing.Color.White;
+            this.printbtn2.Location = new System.Drawing.Point(766, 203);
+            this.printbtn2.Margin = new System.Windows.Forms.Padding(2);
+            this.printbtn2.Name = "printbtn2";
+            this.printbtn2.Size = new System.Drawing.Size(67, 53);
+            this.printbtn2.TabIndex = 33;
+            this.printbtn2.Text = "Print";
+            this.printbtn2.UseVisualStyleBackColor = false;
+            this.printbtn2.Click += new System.EventHandler(this.printbtn2_Click);
+            // 
+            // printbtn
+            // 
+            this.printbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.printbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printbtn.ForeColor = System.Drawing.Color.White;
+            this.printbtn.Location = new System.Drawing.Point(353, 203);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.printbtn.Name = "printbtn";
+            this.printbtn.Size = new System.Drawing.Size(67, 53);
+            this.printbtn.TabIndex = 32;
+            this.printbtn.Text = "Print";
+            this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(355, 267);
+            this.label3.Location = new System.Drawing.Point(420, 267);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(162, 20);
@@ -100,7 +164,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.dgvliver);
-            this.panel4.Location = new System.Drawing.Point(358, 289);
+            this.panel4.Location = new System.Drawing.Point(424, 289);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(338, 218);
@@ -153,7 +217,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(357, 16);
+            this.label1.Location = new System.Drawing.Point(422, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 20);
@@ -164,7 +228,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.dgvprofile);
-            this.panel1.Location = new System.Drawing.Point(361, 38);
+            this.panel1.Location = new System.Drawing.Point(426, 38);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(338, 218);
@@ -173,7 +237,7 @@
             // dgvprofile
             // 
             this.dgvprofile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvprofile.Location = new System.Drawing.Point(2, 2);
+            this.dgvprofile.Location = new System.Drawing.Point(3, 2);
             this.dgvprofile.Margin = new System.Windows.Forms.Padding(2);
             this.dgvprofile.Name = "dgvprofile";
             this.dgvprofile.RowTemplate.Height = 24;
@@ -216,7 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 610);
+            this.ClientSize = new System.Drawing.Size(858, 610);
             this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.btnSbmtLogin);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -252,5 +316,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvblood;
+        private System.Windows.Forms.Button printbtn;
+        private System.Windows.Forms.Button printbtn4;
+        private System.Windows.Forms.Button printbtn3;
+        private System.Windows.Forms.Button printbtn2;
     }
 }

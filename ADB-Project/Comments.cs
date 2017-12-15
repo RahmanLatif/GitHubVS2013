@@ -23,11 +23,11 @@ namespace ADB_Project
             this.user = user;
             this.pid = pid;
             ret = user.getComments(pid);
-            dataGridView1.DataSource = ret.Key.Tables[0];
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "Date";
-            dataGridView1.Columns[2].HeaderText = "Comment";
+            dataComments.DataSource = ret.Key.Tables[0];
+            dataComments.Columns[0].Visible = false;
+            dataComments.Columns[3].Visible = false;
+            dataComments.Columns[1].HeaderText = "Date";
+            dataComments.Columns[2].HeaderText = "Comment";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,5 +56,19 @@ namespace ADB_Project
             pi.Show();
         }
 
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Fluid Report";
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Clinical System";
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dataComments);
+        }
     }
 }
