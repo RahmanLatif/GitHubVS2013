@@ -15,8 +15,6 @@ namespace ADB_Project
     {
         User user;
         int pid;
-        MySqlConnection con;
-        MySqlDataAdapter adapt;
         MySqlCommandBuilder mscb;
         KeyValuePair<DataSet, MySqlDataAdapter> ret;
         public Comments(User user, int pid)

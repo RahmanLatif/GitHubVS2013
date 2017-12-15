@@ -13,33 +13,89 @@ namespace ADB_Project
 {
     public partial class Laboratory : Form
     {
-        KeyValuePair<DataSet, MySqlDataAdapter> ret;
+        User user;
+        int pid;
+        MySqlCommandBuilder mscb;
+        KeyValuePair<DataSet, MySqlDataAdapter> ret1;
+        KeyValuePair<DataSet, MySqlDataAdapter> ret2;
+        KeyValuePair<DataSet, MySqlDataAdapter> ret3;
+        KeyValuePair<DataSet, MySqlDataAdapter> ret4;
         public Laboratory(User user, int pid)
         {
             InitializeComponent();
-            ret = user.GetCoagulationProfile(pid);
-            if (ret.Key != null && ret.Key.Tables[0].Rows.Count != 0)
+            this.user = user;
+            this.pid = pid;
+            ret1 = user.GetCoagulationProfile(pid);
+            if (ret1.Key != null && ret1.Key.Tables[0].Rows.Count != 0)
             {
                 dgvprofile.AutoGenerateColumns = true;
-                dgvprofile.DataSource = ret.Key.Tables[0];
+                dgvprofile.DataSource = ret1.Key.Tables[0];
+                dgvprofile.Columns[0].Visible = false;
+                dgvprofile.Columns[6].Visible = false;
             }
-            ret = user.GetCompleteBloodPicture(pid);
-            if (ret.Key != null && ret.Key.Tables[0].Rows.Count != 0)
+            ret2 = user.GetCompleteBloodPicture(pid);
+            if (ret2.Key != null && ret2.Key.Tables[0].Rows.Count != 0)
             {
                 dgvblood.AutoGenerateColumns = true;
-                dgvblood.DataSource = ret.Key.Tables[0];
+                dgvblood.DataSource = ret2.Key.Tables[0];
+                dgvblood.Columns[0].Visible = false;
+                dgvblood.Columns[11].Visible = false;
             }
-            ret = user.GetElectrolyTeskIdneyfun(pid);
-            if (ret.Key != null && ret.Key.Tables[0].Rows.Count != 0)
+            ret3 = user.GetElectrolyTeskIdneyfun(pid);
+            if (ret3.Key != null && ret3.Key.Tables[0].Rows.Count != 0)
             {
                 dgvfunctions.AutoGenerateColumns = true;
-                dgvfunctions.DataSource = ret.Key.Tables[0];
+                dgvfunctions.DataSource = ret3.Key.Tables[0];
+                dgvfunctions.Columns[0].Visible = false;
+                dgvfunctions.Columns[8].Visible = false;
             }
-            ret = user.GetLiverFun(pid);
-            if (ret.Key != null && ret.Key.Tables[0].Rows.Count != 0)
+            ret4 = user.GetLiverFun(pid);
+            if (ret4.Key != null && ret4.Key.Tables[0].Rows.Count != 0)
             {
                 dgvliver.AutoGenerateColumns = true;
-                dgvliver.DataSource = ret.Key.Tables[0];
+                dgvliver.DataSource = ret4.Key.Tables[0];
+                dgvliver.Columns[0].Visible = false;
+                dgvliver.Columns[9].Visible = false;
+            }
+        }
+
+        private void btnSbmtLogin_Click(object sender, EventArgs e)
+        {
+            foreach (DataRow dr in ret1.Key.Tables[0].Rows)
+            {
+                dr.SetField(0, "" + pid + "");
+            }
+            foreach (DataRow dr in ret2.Key.Tables[0].Rows)
+            {
+                dr.SetField(0, "" + pid + "");
+            }
+            foreach (DataRow dr in ret3.Key.Tables[0].Rows)
+            {
+                dr.SetField(0, "" + pid + "");
+            }
+            foreach (DataRow dr in ret4.Key.Tables[0].Rows)
+            {
+                dr.SetField(0, "" + pid + "");
+            }
+            try
+            {
+                mscb = new MySqlCommandBuilder(ret1.Value);
+                ret1.Value.Update(ret1.Key);
+                mscb = new MySqlCommandBuilder(ret2.Value);
+                ret2.Value.Update(ret2.Key);
+                mscb = new MySqlCommandBuilder(ret3.Value);
+                ret3.Value.Update(ret3.Key);
+                mscb = new MySqlCommandBuilder(ret4.Value);
+                ret4.Value.Update(ret4.Key);
+                MessageBox.Show("Updating done");
+                PersonalInfo pi = new PersonalInfo(user);
+                this.Hide();
+                pi.Show();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Enter Correct Information !!");
             }
         }
     }

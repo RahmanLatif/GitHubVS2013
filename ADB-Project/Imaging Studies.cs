@@ -22,14 +22,24 @@ namespace ADB_Project
             InitializeComponent();
             this.user = user;
             this.pid = pid;
-            ret = user.GetImageStudies(pid);
-            if (ret.Key != null && ret.Key.Tables[0].Rows.Count != 0)
+        }
+
+        private void btnSbmtLogin_Click(object sender, EventArgs e)
+        {
+            List<string> all = new List<string>();
+            all.Add(chestxrays.Text);
+            all.Add(abdominal.Text);
+            all.Add(msct.Text);
+            all.Add(other.Text);
+            if (user.newImagingStudies(pid, all))
             {
-                chestxrays.Text = ret.Key.Tables[0].Rows[0][1].ToString();
-                abdominal.Text = ret.Key.Tables[0].Rows[0][2].ToString();
-                msct.Text = ret.Key.Tables[0].Rows[0][3].ToString();
-                other.Text = ret.Key.Tables[0].Rows[0][4].ToString();
+                MessageBox.Show("Imaging Study Added");
+                PersonalInfo pi = new PersonalInfo(user);
+                this.Hide();
+                pi.Show();
             }
+            else
+                MessageBox.Show("Enter Correct Information !!");
         }
     }
 }

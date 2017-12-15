@@ -194,6 +194,25 @@ namespace ADB_Project
             db.CloseCon();
             return ret;
         }
-
+        public bool newExamination(int pid, List<string> all)
+        {
+            DateTimePicker nw = new DateTimePicker();
+            nw.Value = DateTime.Now;
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "insert into examination (PID,GeneralLock,HeadAndNeckExam ,ChestExam ,CardiacExam,Pulse,BloodPressure,Temperature,RespiratoryRate ,Inspection,SuperficialPalpation,DeepPalpation ,Percussion,Auscultation,ProvisionalDiagnosi, ExDate)values (" + pid + ",'" + all[0] + "','" + all[1] + "','" + all[2] + "','" + all[3] + "','" + all[4] + "','" + all[5] + "','" + all[6] + "','" + all[7] + "','" + all[8] + "','" + all[9] + "','" + all[10] + "','" + all[11] + "','" + all[12] + "','" + all[13] + "','" + nw.Value.ToString("yyyy-MM-dd") + "') ;";
+            bool ret = db.NonQuery(query);
+            db.CloseCon();
+            return ret;
+        }
+        public bool newImagingStudies(int pid, List<string> all)
+        {
+            DataBase db = new DataBase("adb");
+            db.OpenCon();
+            string query = "insert into imagingstudies (PID,ChestXRay,Abdominal_U_S ,MSCTAbdomen ,Others)values (" + pid + ",'" + all[0] + "','" + all[1] + "','" + all[2] + "','" + all[3] + "') ;";
+            bool ret = db.NonQuery(query);
+            db.CloseCon();
+            return ret;
+        }
     }
 }

@@ -31,8 +31,6 @@
             this.btnRstLogin = new System.Windows.Forms.Button();
             this.btnSbmtLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.lbl = new System.Windows.Forms.Label();
-            this.examdate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.provisionaldiag = new System.Windows.Forms.TextBox();
@@ -90,6 +88,7 @@
             this.btnRstLogin.TabIndex = 27;
             this.btnRstLogin.Text = "Reset";
             this.btnRstLogin.UseVisualStyleBackColor = false;
+            this.btnRstLogin.Click += new System.EventHandler(this.btnRstLogin_Click);
             // 
             // btnSbmtLogin
             // 
@@ -103,12 +102,11 @@
             this.btnSbmtLogin.TabIndex = 26;
             this.btnSbmtLogin.Text = "Submit";
             this.btnSbmtLogin.UseVisualStyleBackColor = false;
+            this.btnSbmtLogin.Click += new System.EventHandler(this.btnSbmtLogin_Click);
             // 
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.Silver;
-            this.pnlLogin.Controls.Add(this.lbl);
-            this.pnlLogin.Controls.Add(this.examdate);
             this.pnlLogin.Controls.Add(this.label5);
             this.pnlLogin.Controls.Add(this.panel1);
             this.pnlLogin.Controls.Add(this.label1);
@@ -126,25 +124,6 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(851, 570);
             this.pnlLogin.TabIndex = 28;
-            // 
-            // lbl
-            // 
-            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lbl.Location = new System.Drawing.Point(463, 332);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(154, 23);
-            this.lbl.TabIndex = 31;
-            this.lbl.Text = "Examination Date";
-            // 
-            // examdate
-            // 
-            this.examdate.CustomFormat = "yyyy/MM/dd";
-            this.examdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.examdate.Location = new System.Drawing.Point(633, 332);
-            this.examdate.Name = "examdate";
-            this.examdate.Size = new System.Drawing.Size(200, 20);
-            this.examdate.TabIndex = 30;
             // 
             // label5
             // 
@@ -604,8 +583,6 @@
         private System.Windows.Forms.Button btnRstLogin;
         private System.Windows.Forms.Button btnSbmtLogin;
         private System.Windows.Forms.Panel pnlLogin;
-        private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.DateTimePicker examdate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox provisionaldiag;

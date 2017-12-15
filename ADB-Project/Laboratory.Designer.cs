@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRstLogin = new System.Windows.Forms.Button();
             this.btnSbmtLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,19 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvblood)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnRstLogin
-            // 
-            this.btnRstLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnRstLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRstLogin.ForeColor = System.Drawing.Color.White;
-            this.btnRstLogin.Location = new System.Drawing.Point(555, 553);
-            this.btnRstLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRstLogin.Name = "btnRstLogin";
-            this.btnRstLogin.Size = new System.Drawing.Size(79, 53);
-            this.btnRstLogin.TabIndex = 30;
-            this.btnRstLogin.Text = "Reset";
-            this.btnRstLogin.UseVisualStyleBackColor = false;
-            // 
             // btnSbmtLogin
             // 
             this.btnSbmtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -77,8 +63,9 @@
             this.btnSbmtLogin.Name = "btnSbmtLogin";
             this.btnSbmtLogin.Size = new System.Drawing.Size(79, 53);
             this.btnSbmtLogin.TabIndex = 29;
-            this.btnSbmtLogin.Text = "Submit";
+            this.btnSbmtLogin.Text = "Update";
             this.btnSbmtLogin.UseVisualStyleBackColor = false;
+            this.btnSbmtLogin.Click += new System.EventHandler(this.btnSbmtLogin_Click);
             // 
             // pnlLogin
             // 
@@ -229,9 +216,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 602);
+            this.ClientSize = new System.Drawing.Size(736, 610);
             this.Controls.Add(this.pnlLogin);
-            this.Controls.Add(this.btnRstLogin);
             this.Controls.Add(this.btnSbmtLogin);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Laboratory";
@@ -252,7 +238,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnRstLogin;
         private System.Windows.Forms.Button btnSbmtLogin;
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Label label3;
